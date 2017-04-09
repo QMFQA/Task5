@@ -3,15 +3,43 @@ package main;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.TreeSet;
 
 import task.Card;
-import task.Deck;
-import task.Player;
+//import task.Deck;
+//import task.Player;
 import task.Card.Suit;
 import task.Card.Value;
 
 public class Main {
+	
+	private static Card[] Cards = {
+			new Card( Suit.Hearts, Value.Six ),
+			new Card( Suit.Clubs, Value.Queen ),
+			new Card( Suit.Diamonds, Value.Queen ),
+			new Card( Suit.Hearts, Value.Jack )
+	};
+	
+	public static void main( String[] args ) {
+		TreeSet<Card> data = new TreeSet<Card>();
+		
+		for( int i=0; i<Cards.length; i++ ) {
+			System.out.println( Cards[i] );
+			data.add(Cards[i]);
+		}
+		System.out.println("");
+		
+		System.out.println(Cards[0].compareTo(Cards[2]));
+		System.out.println(Cards[0].compareTo(Cards[1]));
+		System.out.println(Cards[1].compareTo(Cards[2]));
+		System.out.println(Cards[2].compareTo(Cards[2]));
+		
+		System.out.println("");
+		for (Card e : data)
+            System.out.println(e.toString());
+	}
 
+/*
 	private static Deck deck = new Deck();
 	private static Player p1 = new Player("Sanders");
 	private static Player p2 = new Player("Pernal");
@@ -42,5 +70,5 @@ public class Main {
 		p2.printHand();
 		System.out.println("--");
 	}
-
+*/
 }
