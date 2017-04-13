@@ -25,6 +25,15 @@ public class Player {
 		}
 	}
 	
+	public void dropCards( int ...i ) {
+		ArrayList<Card> toDel = new ArrayList<Card>();
+	
+		for( int idx : i ) {
+			toDel.add(this.Cards.get(idx));
+		}
+		boolean t = this.Cards.removeAll(toDel);
+	}
+	
 	public void sort() {
 		Cards.sort( null );
 	}
@@ -35,7 +44,6 @@ public class Player {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return name;
 	}
 	

@@ -8,81 +8,55 @@ public class Card  implements Comparable<Card>{
 	public enum Value  { 
 		Ace {
 			@Override
-			public String toString() {
-				return "A";
-			}
+			public String toString() { return "A"; }
 		},
 		King {
 			@Override
-			public String toString() {
-				return "K";
-			}
+			public String toString() { return "K"; }
 		},
 		Queen {
 			@Override
-			public String toString() {
-				return "Q";
-			}
+			public String toString() { return "Q"; }
 		}, 
 		Jack {
 			@Override
-			public String toString() {
-				return "J";
-			}
+			public String toString() { return "J"; }
 		},
 		Ten {
 			@Override
-			public String toString() {
-				return "10";
-			}
+			public String toString() { return "10"; }
 		}, 
 		Nine {
 			@Override
-			public String toString() {
-				return "9";
-			}
+			public String toString() { return "9"; }
 		},
 		Eight {
 			@Override
-			public String toString() {
-				return "8";
-			}
+			public String toString() { return "8"; }
 		}, 
 		Seven {
 			@Override
-			public String toString() {
-				return "7";
-			}
+			public String toString() { return "7"; }
 		},
 		Six {
 			@Override
-			public String toString() {
-				return "6";
-			}
+			public String toString() { return "6"; }
 		}, 
 		Five {
 			@Override
-			public String toString() {
-				return "5";
-			}
+			public String toString() { return "5"; }
 		}, 
 		Four {
 			@Override
-			public String toString() {
-				return "4";
-			}
+			public String toString() { return "4"; }
 		}, 
 		Three {
 			@Override
-			public String toString() {
-				return "3";
-			}
+			public String toString() { return "3"; }
 		}, 
 		Two {
 			@Override
-			public String toString() {
-				return "2";
-			}
+			public String toString() { return "2"; }
 		}
 	}
 
