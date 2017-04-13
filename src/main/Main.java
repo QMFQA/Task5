@@ -1,14 +1,15 @@
 package main;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
+//import java.util.List;
+//import java.util.List;
 
 import task.Card;
 import task.Deck;
 import task.Player;
-import task.Card.Suit;
-import task.Card.Value;
+//import task.Card.Suit;
+//import task.Card.Value;
 
 public class Main {
 
@@ -25,8 +26,7 @@ public class Main {
 		p2.sort(new Comparator<Card>() {
 			@Override
 			public int compare(Card o1, Card o2) {
-				// TODO Auto-generated method stub
-				return 0;
+				return o2.compareTo(o1);
 			}
 		});
 		printHands();
