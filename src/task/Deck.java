@@ -39,6 +39,7 @@ public class Deck {
 	public void deal(int numCards, Player p1) {
 		try {
 			for (int i=0; i<numCards; i++) p1.addCard(gameCards.get(i));
+			for (int i=0; i<numCards; i++) gameCards.remove(0);
 		} catch (IndexOutOfBoundsException ex) {
 			System.out.println("The cards are over. The deal failed: " + ex.getMessage());
 			System.exit(1);
