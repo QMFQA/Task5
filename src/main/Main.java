@@ -24,9 +24,8 @@ public class Main {
 		p1.sort();
 		p2.sort(new Comparator<Card>() {
 			@Override
-			public int compare(Card o1, Card o2) {
-				// TODO Auto-generated method stub
-				return 0;
+			public int compare(Card card1, Card card2) {
+				return card2.compareTo(card1);
 			}
 		});
 		printHands();
