@@ -5,7 +5,7 @@ public class Card  implements Comparable<Card>{
 	public enum Suit { 
 		Hearts, Diamonds, Spades, Clubs 
 	}
-	public enum Value { 
+	public enum Value  { 
 		Ace {
 			@Override
 			public String toString() {

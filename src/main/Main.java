@@ -36,7 +36,7 @@ public class Main {
 		
 		p1.sort();
 		
-		System.out.println("After first sorting:");
+		System.out.println("After first sorting :");
 		System.out.println(p1 + "'s hand:");
 		p1.printHand();
 		
