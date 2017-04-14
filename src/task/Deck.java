@@ -27,12 +27,12 @@ public class Deck {
 		}
 	}
 
-	public void swap(Player p1, int... indexes) {
+	public void swap(Player player, int... indexes) {
 		int counter = 0;
 		for (int index : indexes) {
-			p1.hand.remove(index - counter - 1);
+			player.hand.remove(index - counter - 1);
 			counter++;
 		}
-		deal(counter, p1);
+		deal(counter, player);
 	}
 }
