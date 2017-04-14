@@ -26,13 +26,17 @@ public class Deck {
 			for (int i=0; i<Cards_count; i++) {
 				p.addCard(card_deck.get(i));
 				card_deck.remove(i);
-				//p.getCards(card_deck.subList(0, Cards_count));
 			}
 
 	}
 	
 	public void swap(Player person, Integer... card_num){
-		
+		for (int i:card_num){
+			person.removeCard(i);
+			person.addCard(card_deck.get(0));
+			card_deck.remove(0);
+		}
+			
 	}
 	
 }

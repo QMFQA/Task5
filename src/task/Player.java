@@ -23,6 +23,10 @@ public class Player {
 		cards.add(onecard);
 	}
 	
+	public void removeCard(int index){
+		cards.remove(index);
+	}
+	
 	public void sort(){
 		
 	}
