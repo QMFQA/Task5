@@ -17,8 +17,7 @@ public class Deck {
 	public void deal( int nCards, Player ...players ) {
 		for (Player p : players){
 			for( int i=0; i < nCards; i++ ) {
-				p.takeCard(Cards.get(0));
-				Cards.remove(0);
+				p.takeCard(Cards.remove(0));
 			}
 		}
 	}

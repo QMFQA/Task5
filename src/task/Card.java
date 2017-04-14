@@ -3,58 +3,68 @@ package task;
 
 public class Card  implements Comparable<Card>{
 	public enum Suit { 
-		Hearts, Diamonds, Spades, Clubs 
+		HEARTS("Hearts"), 
+		DIAMONDS("Diamonds"), 
+		SPADES("Spades"), 
+		CLUBS("Clubs"); 
+		
+		private String name;
+		
+		private Suit( String newName ) {
+			name = newName;
+		}
 	}
+	
 	public enum Value  { 
-		Ace {
+		ACE {
 			@Override
 			public String toString() { return "A"; }
 		},
-		King {
+		KING {
 			@Override
 			public String toString() { return "K"; }
 		},
-		Queen {
+		QUEEN {
 			@Override
 			public String toString() { return "Q"; }
 		}, 
-		Jack {
+		JACK {
 			@Override
 			public String toString() { return "J"; }
 		},
-		Ten {
+		TEN {
 			@Override
 			public String toString() { return "10"; }
 		}, 
-		Nine {
+		NAME {
 			@Override
 			public String toString() { return "9"; }
 		},
-		Eight {
+		EIGHT {
 			@Override
 			public String toString() { return "8"; }
 		}, 
-		Seven {
+		SEVEN {
 			@Override
 			public String toString() { return "7"; }
 		},
-		Six {
+		SIX {
 			@Override
 			public String toString() { return "6"; }
 		}, 
-		Five {
+		FIVE {
 			@Override
 			public String toString() { return "5"; }
 		}, 
-		Four {
+		FOUR {
 			@Override
 			public String toString() { return "4"; }
 		}, 
-		Three {
+		THREE {
 			@Override
 			public String toString() { return "3"; }
 		}, 
-		Two {
+		TWO {
 			@Override
 			public String toString() { return "2"; }
 		}
@@ -80,7 +90,7 @@ public class Card  implements Comparable<Card>{
 
 	@Override
 	public String toString() {
-		return "[ " + v + " of " + s + " ]";
+		return "[ " + v + " of " + s.name + " ]";
 	}
 
 }
