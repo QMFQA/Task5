@@ -18,6 +18,14 @@ public class Player {
 		return cards;
 	}
 	
+	public void addCard(Card card){
+		cards.add(card);
+	}
+	
+	public void replaceCard(int index, Card card){
+		cards.set(index, card);
+	}
+	
 	public void printHand(){
 		for(Card card: cards){
 			System.out.printf("[%s of %s]", card.getValue().getAbbreviation(), card.getSuit().getAbbreviation());

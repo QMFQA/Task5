@@ -21,8 +21,7 @@ public class Deck {
 	public void deal (int numberOfCards, Player... players){
 		while (numberOfCards > 0){
 			for(Player player:players){
-				player.getCards().add(cards.get(0));
-				cards.remove(0);
+				player.addCard(cards.remove(0));
 			}
 			numberOfCards--;
 		}
@@ -30,8 +29,7 @@ public class Deck {
 	
 	public void swap (Player player, Integer... indexOfCards){
 		for(Integer index:indexOfCards){
-			player.getCards().set(index, cards.get(0));
-			cards.remove(0);
+			player.replaceCard(index, cards.remove(0));
 		}
 	}
 	
