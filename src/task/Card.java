@@ -32,7 +32,7 @@ public class Card implements Comparable<Card>{
 
 	@Override
 	public String toString(){
-		return card_suit + " " + card_value;
+		return card_value + " of " + card_suit;
 		
 	}
 

@@ -22,10 +22,13 @@ public class Deck {
 	}
 	
 	public void deal(Integer Cards_count, Player... person){
-		for (Player p : person){
-			// to do
-		}
-	
+		for (Player p : person) 
+			for (int i=0; i<Cards_count; i++) {
+				p.addCard(card_deck.get(i));
+				card_deck.remove(i);
+				//p.getCards(card_deck.subList(0, Cards_count));
+			}
+
 	}
 	
 	public void swap(Player person, Integer... card_num){
