@@ -1,8 +1,7 @@
 package task;
 
-import task.Comparable;
 
-public class Card implements Comparable <Card>{
+public class Card implements Comparable<Card>{
 	
 	private Value cardValue;
 	private Suit cardSuit;
@@ -35,18 +34,17 @@ public class Card implements Comparable <Card>{
 	
 	@Override
 	public String toString() {
-		String s="[" + cardValue.val.toString() + " of " + cardSuit.toString() + "]";
+		String s="[" + cardValue + " of " + cardSuit + "]";
 		return s;
 	}
 
 	@Override
 	public int compareTo(Card otherCard) {
-		if (this.cardSuit.ordinal() < otherCard.cardSuit.ordinal()) return -1;
-		if (this.cardSuit.ordinal() > otherCard.cardSuit.ordinal()) return 1;
-		else {
-			if (this.cardValue.ordinal() < otherCard.cardValue.ordinal()) return -1;
-			else return 1; //Предполагается, что в колоде нет повторяющихся карт
+		int result=this.cardSuit.compareTo(otherCard.cardSuit);
+		if (result==0) {
+			result=this.cardValue.compareTo(otherCard.cardValue);
 		}
+		return result;
 	}
 	
 	public enum Value {
@@ -58,9 +56,25 @@ public class Card implements Comparable <Card>{
 		private Value (String val) {
 			this.val = val;
     	}
+		
+		@Override
+		public String toString(){
+			return val;
+		}
 	}
 
 	public enum Suit {
-		Hearts, Diamonds, Spades, Clubs
+		HEARTS("Hearts"), DIAMONDS("Diamonds"), SPADES("Spades"), CLUBS("Clubs");
+		
+		private String val;
+		
+		private Suit (String val) {
+			this.val = val;
+    	}
+		
+		@Override
+		public String toString(){
+			return val;
+		}
 	}
 }

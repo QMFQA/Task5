@@ -2,52 +2,36 @@ package task;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 
 public class Player {
 	
 	private String name;
-	private List<Card> playerCard;
+	private ArrayList <Card> playerCards;
 	
 	public Player(String name) {
 		this.name=name;
-		playerCard = new ArrayList<>();
+		playerCards = new ArrayList <Card>();
 	}
 	
 	public void addCard(Card c) {
-		playerCard.add(c);
+		playerCards.add(c);
 	}
 	
 	public void setCard(int index, Card inputCard) {
-		playerCard.set(index, inputCard);
+		playerCards.set(index, inputCard);
 	}
 	
 	public void sort() {
-		for (int i=0; i<playerCard.size(); i++)
-			for (int j=i; j<playerCard.size(); j++) {
-				if (playerCard.get(i).compareTo(playerCard.get(j))>0) {
-					Card TempCard = playerCard.get(i);
-					playerCard.set(i, playerCard.get(j));
-					playerCard.set(j, TempCard); 
-				}
-			}
-		
+		playerCards.sort(null);		
 	}
-
+	
 	public void sort(Comparator<Card> comparator) {
-		for (int i=0; i<playerCard.size(); i++)
-			for (int j=i; j<playerCard.size(); j++) {
-				if (comparator.compare(playerCard.get(i), playerCard.get(j))>0) {
-					Card TempCard = playerCard.get(i);
-					playerCard.set(i, playerCard.get(j));
-					playerCard.set(j, TempCard); 
-				}
-			}
+		playerCards.sort(comparator);
 	}
 
 	public void printHand() {
-		for (int i=0; i<playerCard.size(); i++) {
-			System.out.print(playerCard.get(i));
+		for (int i=0; i<playerCards.size(); i++) {
+			System.out.print(playerCards.get(i));
 		}
 		System.out.println();
 	}

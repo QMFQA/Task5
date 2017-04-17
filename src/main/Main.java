@@ -1,7 +1,6 @@
 package main;
 
 import java.util.Comparator;
-
 import task.Card;
 import task.Deck;
 import task.Player;
@@ -21,7 +20,7 @@ public class Main {
 		p2.sort(new Comparator<Card>() {
 			@Override
 			public int compare(Card o1, Card o2) {
-				return (-o1.compareTo(o2));
+				return (o2.compareTo(o1));
 			}
 		});
 		printHands();
