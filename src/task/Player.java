@@ -1,6 +1,8 @@
 package task;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Player {
@@ -28,7 +30,11 @@ public class Player {
 	}
 	
 	public void sort(){
-		
+		Collections.sort(cards);
+	}
+	
+	public void sort(Comparator<Card> comp_card){
+		Collections.sort(cards, comp_card);
 	}
 	
 	@Override
