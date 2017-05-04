@@ -2,6 +2,7 @@ package task;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -28,7 +29,8 @@ public class Deck {
 	}
 	
 	public void swap(Player person, Integer... card_num){
-		for (int i:card_num){
+		Arrays.sort(card_num);
+		for (int i=card_num.length-1; i>=0; i--){
 			person.removeCard(i);
 			person.addCard(card_deck.remove(0));
 		}
