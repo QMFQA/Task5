@@ -1,14 +1,10 @@
 package main;
 
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
 import task.Card;
 import task.Deck;
 import task.Player;
-import task.Card.Suit;
-import task.Card.Value;
 
 public class Main {
 
@@ -24,9 +20,8 @@ public class Main {
 		p1.sort();
 		p2.sort(new Comparator<Card>() {
 			@Override
-			public int compare(Card o1, Card o2) {
-				// TODO Auto-generated method stub
-				return 0;
+			public int compare(Card o1, Card o2) {								
+				return -1 * o1.compareTo(o2);
 			}
 		});
 		printHands();
