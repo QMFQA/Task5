@@ -20,8 +20,7 @@ public class Deck {
 	public void deal (int nCards, Player...players) {
 		for (Player player : players) {
 			for (int i = 0; i < nCards; i++) {
-				player.addCard(cards.get(i));
-				cards.remove(i);
+				player.addCard(cards.remove(0));
 			}
 		}
 	}
@@ -32,8 +31,7 @@ public class Deck {
 	
 	public void swap(Player player, int... cardIndices) {
 		for (int i : cardIndices) {
-			player.swapCard(i, cards.get(0));
-			cards.remove(0);
+			player.swapCard(i, cards.remove(0));
 		}
 	}
 	
